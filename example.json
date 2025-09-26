@@ -1,0 +1,19 @@
+{
+  "n_recycle": 3,
+  "prefix_template": "{stem}",
+  "outdir": "/work/Results/Test",
+  "params": "/models",
+  "use_multimer": false,
+  "items": [
+    {
+      "a3m": "/work/Results/Benchmarking_1/DCA_Benchmark/DCA_Input/Q9CAC5_Q9SD78_paired_aln_filtered.a3m",
+      "Ls": [191, 131],
+      "prefix": "test1"
+    },
+    {
+      "a3m": "/work/Results/Benchmarking_1/DCA_Benchmark/DCA_Input/Q9CAC5_Q9SD78_paired_aln_filtered.a3m",
+      "Ls": [191, 131],
+      "prefix": "test2"
+    }
+  ]
+}
