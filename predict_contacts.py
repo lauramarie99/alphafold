@@ -4,6 +4,8 @@ import numpy as np
 import scipy
 import sys
 import json
+import gc
+import jax
 from alphafold.common import protein, residue_constants
 from alphafold.data import pipeline, pipeline_multimer, msa_pairing
 from alphafold.data import templates, feature_processing
@@ -306,6 +308,9 @@ def main():
                 use_multimer=cfg["use_multimer"],
             )
             print(f"{stem} | {model_name}: pLDDT={lddt:.2f}, mean PAE={pae:.2f}")
+        del feat, inputs, lddt, pae  # free memory
+        gc.collect()
+        jax.clear_caches()
 
 
 if __name__ == "__main__":
